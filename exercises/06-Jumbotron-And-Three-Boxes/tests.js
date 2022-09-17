@@ -96,28 +96,5 @@ describe('2. All the rules to create the second row should be applied', function
     });
     afterEach(() => {jest.resetModules()});
 
-    it('The second sections should contain three columns of the same width', function () {
-        let secondSection = document.querySelectorAll(".row")[1];
-        expect(secondSection).toBeTruthy();
-
-        let cols = secondSection.querySelectorAll("div")
-        expect(cols[0].classList.contains("col") || cols[0].classList.contains("col-4")).toBeTruthy();
-        expect(cols[1].classList.contains("col") || cols[1].classList.contains("col-4")).toBeTruthy();
-        expect(cols[2].classList.contains("col") || cols[2].classList.contains("col-4")).toBeTruthy();
-    })
-
-    it('The 3 columns should contain an H2, a p and a button ', function () {
-        let secondSection = document.querySelectorAll(".row")[1];
-        expect(secondSection).toBeTruthy();
-
-        let cols = secondSection.querySelectorAll("div")
-        for(let i = 0; i < cols.length; i++) {
-            let h2 = cols[i].querySelector("h2");
-            let p = cols[i].querySelector("p");
-            let button = cols[i].querySelector("button");
-            expect(h2).toBeTruthy();
-            expect(p).toBeTruthy();
-            expect(button).toBeTruthy();
-        }
-    });
+    
 });
